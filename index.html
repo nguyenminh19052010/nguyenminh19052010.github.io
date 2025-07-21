@@ -1,16 +1,238 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Hello, World!</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-     <h1>
-       Nguyễn Quốc Minh
-     </h1>
-     <h2>
-       Nguyễn Quốc Minh
-     </h2>
-     
-  </body>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHÚC MỪNG SINH NHẬT BẢO MINH!!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@700&display=swap');
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: url('https://toigingiuvedep.vn/wp-content/uploads/2022/06/anh-nen-dien-thoai-bau-troi-trong-dem-toi.jpg') center center / cover no-repeat fixed;
+      color: #fff5e1;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .flaming-title {
+      font-family: 'Anton', sans-serif;
+      font-size: 3rem;
+    }
+
+    @media (min-width: 640px) {
+      .flaming-title {
+        font-size: 4rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .flaming-title {
+        font-size: 5rem;
+      }
+    }
+
+    .flaming-title {
+      color: #ffea00;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4500, 0 0 30px #ff6347;
+      animation: flicker 1.5s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; text-shadow: 0 0 5px #ff0000, 0 0 10px #ff4500; }
+      100% { opacity: 0.85; text-shadow: 0 0 20px #ff6347, 0 0 40px #ff4500; }
+    }
+
+    .glass-fire {
+      background: rgba(255, 69, 0, 0.15);
+      backdrop-filter: blur(6px);
+      border: 2px solid rgba(255, 69, 0, 0.4);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .glass-fire:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+    }
+
+    .btn-fire {
+      background: linear-gradient(to right, #ff4500, #ff0000);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ff4500;
+      transition: transform 0.2s ease;
+    }
+
+    .btn-fire:hover {
+      transform: scale(1.1);
+      background: linear-gradient(to right, #ff6347, #ff0000);
+    }
+
+    .photo-frame {
+      border: 4px solid #ff0000;
+      box-shadow: 0 0 15px #ff4500;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-frame:hover {
+      transform: rotate(2deg) scale(1.05);
+    }
+
+    .wish-enter {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .lights {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      padding: 8px 0;
+      z-index: 100;
+    }
+
+    .light {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: red;
+      animation: blink 1.2s infinite alternate;
+    }
+
+    .light:nth-child(2) { background: yellow; animation-delay: 0.3s; }
+    .light:nth-child(3) { background: blue; animation-delay: 0.6s; }
+    .light:nth-child(4) { background: green; animation-delay: 0.9s; }
+    .light:nth-child(5) { background: orange; animation-delay: 1.2s; }
+
+    @keyframes blink {
+      from { opacity: 0.2; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="lights">
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+    <div class="light"></div>
+  </div>
+
+  <div class="overlay"></div>
+  <div class="content">
+    <div class="text-center py-12">
+      <h1 class="flaming-title">CHÚC MỪNG SINH NHẬT!</h1>
+      <p class="text-lg mt-4">Nguyễn Thị Bảo Minh (Chẹc) !</p>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="glass-fire mb-8">
+        <h2 class="text-3xl font-bold mb-4">🔥 Món Quà Đặc Biệt 🔥</h2>
+        <p class="mb-6">Chúc bạn Bảo Minh một ngày càng thật xinh đẹp, nhiệt huyết và tràn đầy năng lượng tích cực nha!</p>
+        <button class="btn-fire" onclick="playMusic()">Bùng Cháy Nào!</button>
+      </div>
+
+      <div class="glass-fire mb-8">
+        <h2 class="text-3xl font-bold mb-6">🔥 Ảnh Chẹcc nèe</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="photo-frame">
+            <img src="https://i.postimg.cc/FKFg9Q71/93c5b8a7-502e-4afc-90b8-6f3e87e4f6a0.jpg" alt="Ảnh 1" class="w-full object-cover" />
+          </div>
+          <div class="photo-frame">
+            <img src="https://i.postimg.cc/Xv2KqDCL/87a5c3d6-5314-46b4-9b72-d8544f3f7426.jpg" alt="Ảnh 2" class="w-full object-cover" />
+          </div>
+          <div class="photo-frame">
+            <img src="https://i.postimg.cc/ZKV5Gttw/11543136-b4bd-4bfa-9d26-776f5b9d40b4.jpg" alt="Ảnh 3" class="w-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <div class="glass-fire">
+        <h2 class="text-3xl font-bold mb-4">🔥 Gửi lời chúc cho Chẹcc!</h2>
+        <textarea id="wishInput" placeholder="Viết lời chúc..." class="w-full p-4 rounded-lg text-black mb-4"></textarea>
+        <button class="btn-fire" onclick="addWish()">Gửi Lời Chúc</button>
+        <div id="wishList" class="mt-6 space-y-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <audio id="applauseSound" src="https://www.soundjay.com/human/applause-8.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" preload="auto"></audio>
+
+  <script>
+    let musicPlaying = false;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = JSON.parse(localStorage.getItem('wishes') || '[]');
+      saved.forEach((wish) => displayWish(wish));
+    });
+
+    function playMusic() {
+      const music = document.getElementById('bgMusic');
+      if (!musicPlaying) {
+        music.play();
+        musicPlaying = true;
+      } else {
+        music.pause();
+        music.currentTime = 0;
+        musicPlaying = false;
+      }
+    }
+
+    function addWish() {
+      const input = document.getElementById("wishInput");
+      const wish = input.value.trim();
+      if (wish !== "") {
+        const saved = JSON.parse(localStorage.getItem('wishes') || '[]');
+        saved.unshift(wish);
+        localStorage.setItem('wishes', JSON.stringify(saved));
+        displayWish(wish);
+        input.value = "";
+        document.getElementById("applauseSound").play();
+      }
+    }
+
+    function displayWish(wish) {
+      const wishList = document.getElementById("wishList");
+      const div = document.createElement("div");
+      div.className = "bg-white bg-opacity-80 text-black p-4 rounded-lg shadow-md wish-enter";
+      div.innerText = '🔥 ' + wish;
+      wishList.prepend(div);
+    }
+    
+  </script>
+</body>
 </html>
